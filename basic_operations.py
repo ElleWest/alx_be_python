@@ -1,9 +1,10 @@
-# Basic arithmetic operations script
-# Define two variables with predefined values
 number1 = 10
 number2 = 5
 
-# Print the results in the specified format
-print(f"Addition of {number1} and {number2} is {number1 + number2}")
-print(f"Subtraction of {number1} and {number2} is {number1 - number2}")
-print(f"Multiplication of {number1} and {number2} is {number1 * number2}")
+addition = number1 + number2
+subtraction = number1 - number2
+multiplication = number1 * number2
+
+print("Addition of", number1, "and", number2, "is", addition)
+print("Subtraction of", number1, "and", number2, "is", subtraction)
+print("Multiplication of", number1, "and", number2, "is", multiplication)
