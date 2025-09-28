@@ -1,1 +1,14 @@
-def perform_operation(num1: float, num2: float, operation: str):\n    op = operation.strip().lower()\n    if op == 'add':\n        return num1 + num2\n    if op == 'subtract':\n        return num1 - num2\n    if op == 'multiply':\n        return num1 * num2\n    if op == 'divide':\n        if num2 == 0:\n            return "Error: Division by zero"\n        return num1 / num2\n    return f"Error: Unsupported operation '{operation}'"\n
+def perform_operation(num1, num2, operation):
+    op = str(operation).strip().lower()
+    if op == 'add':
+        return num1 + num2
+    elif op == 'subtract':
+        return num1 - num2
+    elif op == 'multiply':
+        return num1 * num2
+    elif op == 'divide':
+        if num2 == 0:
+            return "Error: Division by zero"
+        return num1 / num2
+    else:
+        return f"Error: Unsupported operation '{operation}'"
