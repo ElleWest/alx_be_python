@@ -1,1 +1,44 @@
-def display_menu():\n    print("Shopping List Manager")\n    print("1. Add Item")\n    print("2. Remove Item")\n    print("3. View List")\n    print("4. Exit")\n\ndef main():\n    shopping_list = []\n    while True:\n        display_menu()\n        choice = input("Enter your choice: " ).strip()\n\n        if choice == '1':\n            item = input("Enter item to add: " ).strip()\n            if item:\n                shopping_list.append(item)\n                print(f"Added: {item}")\n            else:\n                print("Item name cannot be empty.")\n        elif choice == '2':\n            item = input("Enter item to remove: " ).strip()\n            if item in shopping_list:\n                shopping_list.remove(item)\n                print(f"Removed: {item}")\n            else:\n                print(f"'{item}' not found in the shopping list.")\n        elif choice == '3':\n            if not shopping_list:\n                print("Shopping list is empty.")\n            else:\n                print("Current Shopping List:")\n                for idx, it in enumerate(shopping_list, start=1):\n                    print(f"{idx}. {it}")\n        elif choice == '4':\n            print("Goodbye!")\n            break\n        else:\n            print("Invalid choice. Please try again.")\n\nif __name__ == "__main__":\n    main()\n
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
+
+
+def main():
+    shopping_list = []
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ").strip()
+
+        if choice == '1':
+            item = input("Enter the item to add: ").strip()
+            if item:
+                shopping_list.append(item)
+                print(f"Added: {item}")
+            else:
+                print("Item name cannot be empty.")
+        elif choice == '2':
+            item = input("Enter item to remove: ").strip()
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"Removed: {item}")
+            else:
+                print(f"'{item}' not found in the shopping list.")
+        elif choice == '3':
+            if not shopping_list:
+                print("Shopping list is empty.")
+            else:
+                print("Current Shopping List:")
+                for idx, it in enumerate(shopping_list, start=1):
+                    print(f"{idx}. {it}")
+        elif choice == '4':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
